@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app='namaa-news'>
+  <head>
+    <meta charset="utf-8" />
+    <title>Namaa News</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/style.css"/>
+  </head>
+  <body>
+    <div class="container">
+      <div class="page-header  jumbotron header">
+        <h2 class="text-center"><strong><em>Namaa News</em></strong><p>Control Panel</p></h2>
+      </div>
+      <div class="container">
+        <ul class="nav nav-pills nav-justified">
+          <li id="users" class="active"><a href="#/users" data-toggle='tab' role="presentation">Users</a></li>
+          <li id="news"><a href="#/news" data-toggle='tab' role="presentation">News</a></li>
+        </ul>
+        <div class="container" ng-view>
+
+        </div>
+      </div>
+    </div>
+    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular-route/angular-route.js"></script>
+
+    <script src="app/news/news.js"></script>
+    <script src="app/users/users.js"></script>
+    <script src="app/services/services.js"></script>
+    <script src="app/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+{
+  "name": "namaa-news",
+  "author": "Hussam Eddin Alhendi <housam35@gmail.com>",
+  "private": "true",
+  "dependencies": {
+    "angular": "1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "angular-route": "latest"
+  }
+}

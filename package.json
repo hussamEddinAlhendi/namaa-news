@@ -1,0 +1,14 @@
+{
+  "name": "namaa-news",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "nodemon server/server.js"
+  },
+  "author": "Hussam Eddin Alhendi",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.4.3",
+    "express": "^4.4.5",
+    "mysql": "^2.11.1"
+  }
+}
