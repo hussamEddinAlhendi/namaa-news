@@ -24,7 +24,18 @@ module.exports = {
 		query(sql, res)
 	},
 	editUser: function (req, res, next) {
-		var sql = 'UPDATE users SET password="' + req.body.password + '",email="' + req.body.email + '" WHERE username="' + req.body.username + '";';
-		query(sql, res)
+		if (!!req.body.password && !!req.body.email) {
+			var sql = 'UPDATE users SET password="' + req.body.password + '",email="' + req.body.email + '" WHERE username="' + req.body.username + '";';
+			console.log(sql)
+			query(sql, res)
+		} else if (!!req.body.password) {
+			var sql = 'UPDATE users SET password="' + req.body.password + '" WHERE username="' + req.body.username + '";';
+			console.log(sql)
+			query(sql, res)
+		} else if (!!req.body.email) {
+			var sql = 'UPDATE users SET email="' + req.body.email + '" WHERE username="' + req.body.username + '";';
+			console.log(sql)
+			query(sql, res)
+		}
 	}
 };
