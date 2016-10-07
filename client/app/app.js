@@ -1,5 +1,6 @@
 angular.module('namaa-news', [
   'namaa-news.news',
+  'ngMaterial',
   'namaa-news.users',
   'namaa-news.services',
   'ngRoute'

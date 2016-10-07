@@ -19,12 +19,12 @@ module.exports = {
 		query(sql, res)
 	},
 	deleteUser: function (req, res, next) {
-		var sql = 'DELETE FROM users WHERE username="' + req.body.username + '";'
+		console.log('asdfasdfadfasdfasfdasf', req.params)
+		var sql = 'DELETE FROM users WHERE username="' + req.params.username + '";'
 		query(sql, res)
 	},
 	editUser: function (req, res, next) {
 		var sql = 'UPDATE users SET password="' + req.body.password + '",email="' + req.body.email + '" WHERE username="' + req.body.username + '";';
+		query(sql, res)
 	}
 };
-
-//username="' + req.body.username + '",

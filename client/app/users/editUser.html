@@ -1,0 +1,25 @@
+<md-dialog>
+  <form ng-cloak>
+    <md-dialog-content>
+      <h1>Edit {{username}}</h1>
+      <div class="form-horizontal">
+        <md-input-container>
+          <label>Password</label>
+          <input type="text" ng-model="password">
+        </md-input-container>
+
+        <md-input-container>
+          <label>Email</label>
+          <input type="text" ng-model="email">
+        </md-input-container>
+      </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      
+      <md-button ng-click="edit(username)">
+        Edit
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>

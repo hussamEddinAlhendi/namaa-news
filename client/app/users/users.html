@@ -1,6 +1,6 @@
  <script>$('#news').removeClass("active");
   $('#users').addClass("active"); </script>
-<div class="col-sm-8 col-md-8 col-lg-8">
+<div class="col-sm-8 col-md-8 col-lg-8" ng-controller="UsersController" ng-init="initialize()">
 	<div class="form">
 		<table class="table table-hover">
 		  <tr>
@@ -12,13 +12,15 @@
 		  	<td>{{user.username}}</td>
 		  	<td>{{user.password}}</td>
 		  	<td>{{user.email}}</td>
+		  	<td ng-click="deleteUser(user.username)" ><i class="glyphicon glyphicon-remove-circle"></i></td>
+		  	<td ng-click="showDialog($event, user.username)" ><i class="glyphicon glyphicon-pencil"></i></td>
 		  </tr>
 		</table>
 	</div>
 </div>
   <div class="form tab-content col-sm-4 col-md-4 col-lg-4" >
 <div class="tab-pane fade in active">
-	<form class="form-horizontal" name="signinForm" ng-submit='signinUser()'>
+	<form class="form-horizontal" name="userForm" ng-submit='addNewUser()'>
 	<div class="form-group">
 	  <div class="col-sm-10">
 	    <input type="text" class="form-control" id="username" placeholder="Username" ng-model='user.username'>
