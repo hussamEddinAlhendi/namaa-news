@@ -28,9 +28,9 @@ angular.module('namaa-news.users', [])
 			});
 		};
 
-		$scope.showDialog = function(ev, username) {
+		$scope.showDialog = function(ev, user) {
 			$mdDialog.show({
-				locals: {username: username},
+				locals: {user: user},
 				controller: editUser,
 				templateUrl: 'app/users/editUser.html',
 				parent: angular.element(document.body),
@@ -39,15 +39,14 @@ angular.module('namaa-news.users', [])
 				fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
 			})
 			.then(function(editUser) {
-	    	console.log(editUser)
 				$scope.editUser(editUser)
 			}, function() {
 				console.log('cancel');
 			});
 		};
 
-		function editUser($scope, $mdDialog, username) {
-			$scope.username = username;
+		function editUser($scope, $mdDialog, user) {
+			$scope.user = user;
 	    $scope.hide = function() {
 	      $mdDialog.hide();
 	    };
@@ -56,8 +55,8 @@ angular.module('namaa-news.users', [])
 	      $mdDialog.cancel();
 	    };
 
-	    $scope.edit = function(username) {
-	      $mdDialog.hide({username: username, password: $scope.password, email: $scope.email});
+	    $scope.edit = function(user) {
+	      $mdDialog.hide(user);
 	    };
   }
 });
