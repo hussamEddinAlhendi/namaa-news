@@ -1,0 +1,36 @@
+<md-dialog>
+  <form ng-cloak>
+    <md-dialog-content>
+      <h1 class="center-block">Edit</h1>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label>Details</label>
+          <div >
+          <input type="text" class="form-control" id="title" placeholder="Title" ng-model='news.TITLE'/>
+         </div>
+        </div>
+
+        <div class="form-group">
+          <label>Overview</label>
+          <div >
+          <textarea class="form-control" rows="2" id="overview" placeholder="Overview" ng-model='news.OVERVIEW'></textarea>
+         </div>
+        </div>
+
+        <div class="form-group">
+          <label>Details</label>
+          <div >
+          <textarea class="form-control" rows="3" id="details" placeholder="Details" ng-model='news.DETAILS'></textarea>
+         </div>
+        </div>
+      </form>
+    </md-dialog-content>
+
+    <md-dialog-actions layout="row">
+      
+      <md-button ng-click="edit(news)">
+        Edit
+      </md-button>
+    </md-dialog-actions>
+  </form>
+</md-dialog>
